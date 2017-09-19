@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 
 gem 'uikit-rails'
-gem 'sass-rails', '>= 3.2'
+# gem 'sass-rails', '>= 3.2'
 
 gem 'slim-rails'
 gem 'carrierwave', '~> 1.0'
