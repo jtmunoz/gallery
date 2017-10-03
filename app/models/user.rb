@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :galleries
-  has_many :photos, through :galleries, source: :gallery
+  has_many :photos, through: :galleries
 end
