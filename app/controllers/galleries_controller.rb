@@ -20,4 +20,8 @@ class GalleriesController < ApplicationController
     	render 'new'
   	end
   end
+
+  def edit
+  	@gallery = Gallery.find(params[:id])
+  end
 end
