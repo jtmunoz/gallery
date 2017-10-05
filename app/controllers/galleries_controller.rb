@@ -11,4 +11,13 @@ class GalleriesController < ApplicationController
 	def new
 		@gallery = Gallery.new
 	end
+
+	def create 
+  	@gallery = Gallery.new(galery_params)
+  	if @gallery.save
+    	redirect_to @gallery
+  	else
+    	render 'new'
+  	end
+  end
 end
