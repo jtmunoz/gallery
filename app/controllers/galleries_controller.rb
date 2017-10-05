@@ -35,8 +35,8 @@ class GalleriesController < ApplicationController
   end
 
   def destroy
-  	@post = Post.find(params[:id])
-  	@post.destroy
-  	redirect_to posts_path
+  	@gallery = Gallery.find(params[:id])
+  	@pgallery.destroy
+  	redirect_to galleries_path
   end
 end
