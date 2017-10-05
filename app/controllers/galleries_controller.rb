@@ -24,4 +24,19 @@ class GalleriesController < ApplicationController
   def edit
   	@gallery = Gallery.find(params[:id])
   end
+
+  def update
+  	@gallery = Gallery.find(params[:id])
+  	if @gallery.update(gallery_params)
+    	redirect_to @gallery
+  	else
+    	render 'edit'
+  	end
+  end
+
+  def destroy
+  	@post = Post.find(params[:id])
+  	@post.destroy
+  	redirect_to posts_path
+  end
 end
