@@ -8,4 +8,8 @@ class PhotosController < ApplicationController
 		@photo = Photo.find(params[:id])
 	end
 
+	def new
+		@photo = Photo.new
+	end
+
 end
