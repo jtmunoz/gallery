@@ -12,4 +12,12 @@ class PhotosController < ApplicationController
 		@photo = Photo.new
 	end
 
+	def create 
+  	@gallery = Photo.new(photo_params)
+  	if @photo.save
+    	redirect_to @photo
+  	else
+    	render 'new'
+  	end
+  end
 end
