@@ -36,7 +36,7 @@ class GalleriesController < ApplicationController
 
   def destroy
   	@gallery = Gallery.find(params[:id])
-  	@pgallery.destroy
+  	@gallery.destroy
   	redirect_to galleries_path
   end
 end
