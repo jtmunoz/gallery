@@ -33,4 +33,10 @@ class PhotosController < ApplicationController
     	render 'edit'
   	end
   end
+
+  def destroy
+  	@photo = Photo.find(params[:id])
+  	@photo.destroy
+  	redirect_to photos_path
+  end
 end
