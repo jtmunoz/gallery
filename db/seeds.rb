@@ -8,3 +8,7 @@
 
 
 usr = User.create!({email: "admin@admin.com", password: "password", password_confirmation: "password"})
+
+gallery = Gallery.new({name: "mopa"})
+
+gallery
