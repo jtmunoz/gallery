@@ -2,10 +2,9 @@ p.uk-h1 hello
 h1 hello
 
 - if @galleries
-	- @galleries.each do |gallery|
-		p 
-			|= gallery.name
-		p 
-			|= gallery.photos.size 
+	- @galleries.each do |gal|
+		p Gallery Name (= gal.name)
+		p = gal.photos.size 
+
 - else 
 	p NO GALLERIES			
