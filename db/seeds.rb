@@ -9,12 +9,12 @@
 
 usr = User.create!({email: "jordan@jordan.com", password: "password", password_confirmation: "password"})
 
-gallery = Gallery.new({name: "mopa"})
+gallery = Gallery.create!({name: "mopa", user_id: 1})
 
 3.times do 
-	photo = Photo.new({title: Faker::Lorem.word,url: Faker::LoremPixel.image})
+	photo = Photo.new({title: Faker::Lorem.word, url: Faker::LoremPixel.image})
 	photo.gallery_id = gallery.id 
-	photo.save
-	
+	photo.save!
+
 end
 
