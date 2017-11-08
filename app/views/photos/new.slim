@@ -1,0 +1,31 @@
+
+= form_with scope: :photo, url: photos_path, local: true do |form| 
+ 
+  - if @photo.errors.any? 
+    div#error_explanation
+      h3= pluralize(@photo.errors.count, "error")  
+        prohibited this photo from being saved:
+
+      ul
+        - @photo.errors.full_messages.each do |msg| 
+          li= msg 
+ 
+  p
+    = form.label :title 
+    br
+    = form.text_field :title 
+
+ 
+  p
+    = form.label :text 
+    br
+    = form.text_area :text 
+
+ 
+  p
+    = form.submit 
+
+ 
+
+ 
+= link_to 'Back', photos_path, {:class => "uk-button uk-button-large uk-border-rounded"} 
