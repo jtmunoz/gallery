@@ -5,15 +5,15 @@ html
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    
     meta[charset='utf-8']
   
   nav.uk-navbar
     ul.uk-navbar-nav 
       li 
         =link_to 'Home', :class => 'uk-button' 
-          span#span 
+          span 
             i.uk-icon-home.uk-icon-medium&nbsp;Home
-      li Hello
     
 
   body.uk-container.uk-container-center
