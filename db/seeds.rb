@@ -15,6 +15,17 @@ gallery = Gallery.create!({name: "mopa", user_id: 1})
 	photo = Photo.new({title: Faker::Lorem.word, url: Faker::LoremPixel.image})
 	photo.gallery_id = gallery.id 
 	photo.save!
+end
 
+3.times do 
+	photo = Photo.new({title: Faker::Lorem.word, url: Faker::LoremPixel.image})
+	photo.gallery_id = gallery.id 
+	photo.save!
+end
+
+3.times do 
+	photo = Photo.new({title: Faker::Lorem.word, url: Faker::LoremPixel.image})
+	photo.gallery_id = gallery.id 
+	photo.save!
 end
 
