@@ -18,5 +18,9 @@
 
 - if @galleries
 	- @galleries.each do |gallery|
-		=link_to image_tag(gallery.photos.first.url), gallery_path(gallery.id)
+		/ =link_to image_tag(gallery.photos.first.url), gallery_path(gallery.id)
+		= link_to gallery_path(gallery.id) do 
+			div
+				=image_tag(gallery.photos.first.url)
+				p= gallery.photos.first.url
 			
