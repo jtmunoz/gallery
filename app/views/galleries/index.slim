@@ -17,9 +17,11 @@
 / 	p NO GALLERIES			
 
 - if @galleries
-	- @galleries.each do |gallery|
-		=link_to image_tag(gallery.first_photo), gallery_path(gallery.id)
-		p=link_to gallery.name, gallery_path(gallery.id)
+	div.uk-grid
+		- @galleries.each do |gallery|
+			div.uk-width-medium-1-3
+				=link_to image_tag(gallery.first_photo), gallery_path(gallery.id)
+				p=link_to gallery.name, gallery_path(gallery.id)
 - else 
 	p NO GALLERIES					
 
