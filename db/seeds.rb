@@ -9,23 +9,25 @@
 
 usr = User.create!({email: "jordan@jordan.com", password: "password", password_confirmation: "password"})
 
-gallery = Gallery.create!({name: "mopa", user_id: 1})
+gallery1 = Gallery.create!({name: "mopa", user_id: 1})
+gallery2 = Gallery.create!({name: "moca", user_id: 1})
+gallery3 = Gallery.create!({name: "lacma", user_id: 1})
 
 3.times do 
 	photo = Photo.new({title: Faker::Lorem.word, url: Faker::LoremPixel.image})
-	photo.gallery_id = gallery.id 
+	photo.gallery_id = gallery1.id 
 	photo.save!
 end
 
 3.times do 
 	photo = Photo.new({title: Faker::Lorem.word, url: Faker::LoremPixel.image})
-	photo.gallery_id = gallery.id 
+	photo.gallery_id = gallery2.id 
 	photo.save!
 end
 
 3.times do 
 	photo = Photo.new({title: Faker::Lorem.word, url: Faker::LoremPixel.image})
-	photo.gallery_id = gallery.id 
+	photo.gallery_id = gallery3.id 
 	photo.save!
 end
 
