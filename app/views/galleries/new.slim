@@ -1,0 +1,30 @@
+= form_with scope: :gallery, url: galleries_path, local: true do |form| 
+ 
+  - if @gallery.errors.any? 
+    div#error_explanation
+      h3= pluralize(@gallery.errors.count, "error")  
+        prohibited this gallery from being saved:
+
+      ul
+        - @gallery.errors.full_messages.each do |msg| 
+          li= msg 
+ 
+  p
+    = form.label :title 
+    br
+    = form.text_field :title 
+
+ 
+  p
+    = form.label :text 
+    br
+    = form.text_area :text 
+
+ 
+  p
+    = form.submit :class => "uk-button uk-button-large uk-border-rounded"
+
+ 
+
+ 
+= link_to 'Back', galleries_path, {:class => "uk-button uk-button-large uk-border-rounded tm-pill-button"} 
