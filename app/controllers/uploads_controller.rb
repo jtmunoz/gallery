@@ -28,5 +28,6 @@ class UploadsController < ApplicationController
   end
 
   def index
+  	@uploads = Upload.all
   end
 end
