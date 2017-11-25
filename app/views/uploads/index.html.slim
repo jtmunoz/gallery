@@ -1,2 +1,4 @@
-h1 Uploads#index
-p Find me in app/views/uploads/index.html.slim
+h1 All uploads
+- @uploads.each do |upload| 
+	div
+		= link_to upload.name, upload.url 
