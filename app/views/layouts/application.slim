@@ -9,16 +9,26 @@ html
     meta[charset='utf-8']
   
   nav.uk-navbar
-    ul.uk-navbar-nav 
-      li 
-        =link_to galleries_path, :class => 'uk-button uk-button-primary' 
-          span 
-            i.uk-icon-object-group.uk-icon-medium&nbsp;Galleries
-      li
-        =link_to new_gallery_path, :class => 'uk-button uk-button-success'
-          span
-            i.uk-icon-object-group.uk-icon-medium&nbsp;New Gallery 
-    
+    ul.uk-navbar-nav
+      -if user_signed_in? 
+        li 
+          =link_to galleries_path, :class => 'uk-button uk-button-primary' 
+            span 
+              i.uk-icon-object-group.uk-icon-medium&nbsp;Galleries
+        li
+          =link_to new_gallery_path, :class => 'uk-button uk-button-success'
+            span
+              i.uk-icon-object-group.uk-icon-medium&nbsp;New Gallery
+
+        li
+          =link_to new_gallery_path, :class => 'uk-button uk-button-success'
+            span
+              i.uk-icon-object-group.uk-icon-medium&nbsp;Log Out       
+      -else
+        li
+          =link_to new_session_path, :class => 'uk-button uk-button-warning'
+            span
+              i.uk-icon-object-home.uk-icon-medium&nbsp;Log In
 
   body.uk-container.uk-container-center
     p.uk-text-warning= notice
