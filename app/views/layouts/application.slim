@@ -24,11 +24,11 @@ html
           =link_to new_gallery_path, :class => 'uk-button uk-button-success'
             span
               i.uk-icon-object-group.uk-icon-medium&nbsp;Log Out       
-      -else
-        li
-          =link_to new_session_path, :class => 'uk-button uk-button-warning'
-            span
-              i.uk-icon-object-home.uk-icon-medium&nbsp;Log In
+      / -else
+      /   li
+      /     =link_to new_session_path, :class => 'uk-button uk-button-warning'
+      /       span
+      /         i.uk-icon-object-home.uk-icon-medium&nbsp;Log In
 
   body.uk-container.uk-container-center
     p.uk-text-warning= notice
