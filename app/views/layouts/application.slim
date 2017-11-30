@@ -12,16 +12,16 @@ html
     ul.uk-navbar-nav
       -if user_signed_in? 
         li 
-          =link_to galleries_path, :class => 'uk-button uk-button-primary' 
+          =link_to galleries_path, :class => 'uk-active' 
             span 
               i.uk-icon-object-group.uk-icon-medium&nbsp;Galleries
         li
-          =link_to new_gallery_path, :class => 'uk-button uk-button-success'
+          =link_to new_gallery_path, :class => ''
             span
               i.uk-icon-object-group.uk-icon-medium&nbsp;New Gallery
 
         li
-          =link_to new_gallery_path, :class => 'uk-button uk-button-success'
+          =link_to new_gallery_path, :class => ''
             span
               i.uk-icon-object-group.uk-icon-medium&nbsp;Log Out       
       / -else
