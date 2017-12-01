@@ -8,6 +8,7 @@ html
 
     meta[charset='utf-8']
   
+  a#top
   nav.uk-navbar
     ul.uk-navbar-nav
       -if user_signed_in? 
@@ -37,6 +38,8 @@ html
   = yield
 
   footer
+    a href="#top" To Top
+
     div.uk-grid.uk-grid-width-medium-1-3
       div hello
       div hello
