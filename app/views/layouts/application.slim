@@ -12,7 +12,7 @@ html
   nav.uk-navbar
     ul.uk-navbar-nav
       -if user_signed_in? 
-        li 
+        li.uk-active
           =link_to galleries_path, :class => 'uk-active' 
             span 
               i.uk-icon-object-group.uk-icon-medium&nbsp;Galleries
@@ -20,11 +20,23 @@ html
           =link_to new_gallery_path, :class => ''
             span
               i.uk-icon-object-group.uk-icon-medium&nbsp;New Gallery
-
         li
           =link_to new_gallery_path, :class => ''
             span
               i.uk-icon-object-group.uk-icon-medium&nbsp;Log Out       
+        
+        li.uk-parent 
+          a href="" Galleries
+
+          div.uk-dropdown.uk-dropdown-navbar.uk-dropdown-bottom 
+              ul.uk-nav.uk-nav-navbar
+                  li
+                      a href="#" Item
+                  li
+                      a href="#" Another item
+                  
+        
+
       / -else
       /   li
       /     =link_to new_session_path, :class => 'uk-button uk-button-warning'
