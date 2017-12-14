@@ -9,6 +9,7 @@ html
     meta[charset='utf-8']
   
   a#top
+
   nav.uk-navbar
     ul.uk-navbar-nav
       -if user_signed_in? 
@@ -29,13 +30,35 @@ html
           a href="" Galleries
 
           div.uk-dropdown.uk-dropdown-navbar.uk-dropdown-bottom 
-              ul.uk-nav.uk-nav-navbar
-                  li
-                      a href="#" Item
-                  li
-                      a href="#" Another item
+            ul.uk-nav.uk-nav-navbar
+              li
+                a href="#" Item
+              li
+                a href="#" Another item
                   
-        
+        ul.uk-navbar-nav 
+          li.uk-parent.uk-active {data-uk-dropdown} 
+            a href="" 
+              i.uk-icon-home 
+              | Level1
+
+            div.uk-dropdown.uk-dropdown-navbar.uk-dropdown-bottom
+                ul.uk-nav uk-nav-navbar
+                    li
+                        a href="#" data-uk-tooltip title="First Item" Item
+                    li
+                        a href="#" Another item
+                    li.uk-nav-header Header
+                    
+                    li
+                        a href="#" Item
+                    li
+                        a href="#" Another item
+                    
+                    li.uk-nav-divider
+
+                    li
+                        a href="#" Separated item
 
       / -else
       /   li
