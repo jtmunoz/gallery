@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
-//= require_tree .
 //= require uikit
 //= require uikit-components
+//= require turbolinks
+//= require_tree .
