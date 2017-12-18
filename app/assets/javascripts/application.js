@@ -14,4 +14,5 @@
 //= require uikit
 //= require uikit-components
 //= require turbolinks
+//= require_self
 //= require_tree .
