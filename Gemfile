@@ -36,6 +36,7 @@ gem 'devise'
 gem 'acts_as_votable', '~> 0.11.1'
 gem 'uikit-rails'
 # gem 'sass-rails', '>= 3.2'
+gem 'jquery-rails'
 
 
 gem 'slim-rails'
