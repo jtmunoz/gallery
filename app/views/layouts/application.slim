@@ -16,52 +16,30 @@ html
   nav.uk-navbar
     ul.uk-navbar-nav
       -if user_signed_in? 
-        li.uk-active
-          =link_to galleries_path, :class => 'uk-active' 
-            span 
-              i.uk-icon-object-group.uk-icon-medium&nbsp;Galleries
-        li
-          =link_to new_gallery_path, :class => ''
-            span
-              i.uk-icon-object-group.uk-icon-medium&nbsp;New Gallery
-        li
-          =link_to new_gallery_path, :class => ''
-            span
-              i.uk-icon-object-group.uk-icon-medium&nbsp;Log Out       
-        
-        li.uk-parent 
-          a href="" Galleries
-
-          div.uk-dropdown.uk-dropdown-navbar.uk-dropdown-bottom 
-            ul.uk-nav.uk-nav-navbar
-              li
-                a href="#" Item
-              li
-                a href="#" Another item
-                  
- 
         li.uk-parent.uk-active data-uk-dropdown=""
           a href="" 
             i.uk-icon-home 
-            |  Galleries
+            | Galleries
 
           div.uk-dropdown.uk-dropdown-navbar.uk-dropdown-bottom
             ul.uk-nav.uk-nav-navbar
+              li.uk-active
+                =link_to galleries_path, :class => 'uk-active' 
+                  span 
+                    i.uk-icon-object-group.uk-icon-medium
+                    | Galleries
               li
-                a href="#" data-uk-tooltip title="First Item" Item
+                =link_to new_gallery_path, :class => ''
+                  span
+                    i.uk-icon-object-group.uk-icon-medium
+                    | New Gallery
               li
-                a href="#" Another item
+                =link_to new_gallery_path, :class => ''
+                  span
+                    i.uk-icon-object-group.uk-icon-medium
+                    | Log Out  
               li.uk-nav-header Header
-              
-              li
-                a href="#" Item
-              li
-                a href="#" Another item
-              
-              li.uk-nav-divider
 
-              li
-                a href="#" Separated item
 
       / -else
       /   li
