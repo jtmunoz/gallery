@@ -39,7 +39,11 @@ html
                     i.uk-icon-object-group.uk-icon-medium
                     | Log Out  
               li.uk-nav-header Header
-
+        
+        li 
+          =link_to destroy_user_session_path, method: :delete   
+            span
+              | Log Out
 
       / -else
       /   li
