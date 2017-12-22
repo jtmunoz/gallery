@@ -19,27 +19,33 @@ html
         li.uk-parent.uk-active data-uk-dropdown=""
           a href="" 
             i.uk-icon-home 
-            | Galleries
+            |  Galleries
 
           div.uk-dropdown.uk-dropdown-navbar.uk-dropdown-bottom
             ul.uk-nav.uk-nav-navbar
               li.uk-active
                 =link_to galleries_path, :class => 'uk-active' 
                   span 
-                    i.uk-icon-object-group.uk-icon-medium
-                    | Galleries
+                    i.uk-icon-object-group
+                    |  Galleries
               li
                 =link_to new_gallery_path, :class => ''
                   span
-                    i.uk-icon-object-group.uk-icon-medium
-                    | New Gallery
+                    i.uk-icon-object-group
+                    |  New Gallery
               li
                 =link_to new_gallery_path, :class => ''
                   span
-                    i.uk-icon-object-group.uk-icon-medium
-                    | Log Out  
+                    i.uk-icon-object-group
+                    |  Log Out  
               li.uk-nav-header Header
-        
+
+        li.uk-parent.uk-active data-uk-dropdown=""
+          a href="" 
+            i.uk-icon-photo 
+            |  Photos
+
+
         li 
           =link_to destroy_user_session_path, method: :delete   
             span
