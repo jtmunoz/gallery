@@ -45,6 +45,18 @@ html
             i.uk-icon-photo 
             |  Photos
 
+          div.uk-dropdown.uk-dropdown-navbar.uk-dropdown-bottom
+            ul.uk-nav.uk-nav-navbar
+              li.uk-active
+                =link_to photos_path, :class => '' 
+                  span 
+                    i.uk-icon-photo
+                    |  Photos
+              li
+                =link_to new_photo_path, :class => ''
+                  span
+                    i.uk-icon-photo
+                    |  New Photo
 
         li 
           =link_to destroy_user_session_path, method: :delete   
