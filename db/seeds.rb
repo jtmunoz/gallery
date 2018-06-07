@@ -20,7 +20,7 @@ gallery3 = Gallery.create!({name: "lacma", user_id: 1})
 end
 
 3.times do 
-	photo = Photo.new({title: Faker::Lorem.word, url: Faker::LoremPixel.image})
+	photo = Photo.new({title: Faker::Lorem.word, url: 'https://placekitten.com/g/300/300'})
 	photo.gallery_id = gallery2.id 
 	photo.save!
 end
